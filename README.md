@@ -4,7 +4,7 @@ A concept website for a fictional Italian restaurant, built with plain **HTML, C
 
 ![Bella Italia preview](images/og-image.jpg)
 
-**Live demo:** _coming soon_
+**Live demo:** [kinglant.github.io/bella-italia](https://kinglant.github.io/bella-italia/)
 
 > This is a portfolio project. The restaurant, address, phone number, reviews and reservations are fictional — nothing is sent to a server.
 
