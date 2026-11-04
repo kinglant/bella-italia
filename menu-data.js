@@ -1,0 +1,101 @@
+/* ===================== Bella Italia — menu data =====================
+   tags: "v" vegetarian, "gf" gluten-free, "hot" spicy, "chef" chef's pick
+   price: number, or [glass, bottle] for wines
+   nameIt / subIt / descIt: Italian versions (fall back to English when missing)
+===================================================================== */
+window.MENU = [
+  {
+    id: "antipasti",
+    name: "Antipasti",
+    sub: "Starters to share",
+    nameIt: "Antipasti",
+    subIt: "Da condividere",
+    items: [
+      { name: "Bruschetta al Pomodoro", desc: "Grilled ciabatta, vine tomatoes, garlic, fresh basil and extra-virgin olive oil.", descIt: "Ciabatta grigliata, pomodori, aglio, basilico fresco e olio extravergine d'oliva.", price: 9.5, tags: ["v"] },
+      { name: "Burrata Pugliese", desc: "Creamy burrata, heirloom tomatoes, basil pesto and aged balsamic.", descIt: "Burrata cremosa, pomodori cuore di bue, pesto di basilico e aceto balsamico invecchiato.", price: 14.95, tags: ["v", "chef"] },
+      { name: "Carpaccio di Manzo", desc: "Thinly sliced beef, wild arugula, capers, shaved parmigiano and lemon.", descIt: "Manzo affettato sottile, rucola selvatica, capperi, scaglie di parmigiano e limone.", price: 15.5, tags: ["gf"] },
+      { name: "Calamari Fritti", desc: "Crispy fried squid with lemon aioli and house marinara.", descIt: "Calamari croccanti con aioli al limone e salsa marinara della casa.", price: 13.95, tags: [] },
+      { name: "Arancini Siciliani", desc: "Saffron risotto balls filled with mozzarella and peas, spicy arrabbiata dip.", descIt: "Arancini allo zafferano ripieni di mozzarella e piselli, con salsa all'arrabbiata.", price: 11.5, tags: ["v", "hot"] },
+      { name: "Tagliere Toscano", desc: "Prosciutto, finocchiona, pecorino, olives, fig jam and warm focaccia — for two.", descIt: "Prosciutto, finocchiona, pecorino, olive, confettura di fichi e focaccia calda — per due.", price: 22, tags: [] },
+    ],
+  },
+  {
+    id: "pasta",
+    name: "Pasta & Risotto",
+    sub: "Primi piatti · handmade daily",
+    nameIt: "Pasta & Risotto",
+    subIt: "Primi piatti · fatti a mano ogni giorno",
+    items: [
+      { name: "Tagliatelle Pomodoro", desc: "Hand-rolled tagliatelle, cherry tomatoes, basil and parmigiano reggiano.", nameIt: "Tagliatelle al Pomodoro", descIt: "Tagliatelle tirate a mano, pomodorini, basilico e parmigiano reggiano.", price: 17.5, tags: ["v"] },
+      { name: "Spaghetti alla Carbonara", desc: "Guanciale, egg yolk, pecorino romano and cracked black pepper.", descIt: "Guanciale, tuorlo d'uovo, pecorino romano e pepe nero macinato.", price: 18.5, tags: [] },
+      { name: "Spaghetti alla Salsiccia", desc: "Spaghetti with Italian fennel sausage, San Marzano tomato and parsley.", descIt: "Spaghetti con salsiccia al finocchietto, pomodoro San Marzano e prezzemolo.", price: 18.5, tags: [] },
+      { name: "Classic Lasagna", desc: "Layers of pasta, rich meat ragù, béchamel and parmesan.", nameIt: "Lasagna Classica", descIt: "Strati di pasta, ricco ragù di carne, besciamella e parmigiano.", price: 18.95, tags: [] },
+      { name: "Pappardelle al Cinghiale", desc: "Wide ribbons with wild boar ragù slow-cooked in Chianti.", descIt: "Pappardelle con ragù di cinghiale cotto lentamente nel Chianti.", price: 22.5, tags: ["chef"] },
+      { name: "Penne all'Arrabbiata", desc: "San Marzano tomatoes, garlic, Calabrian chili and parsley.", descIt: "Pomodoro San Marzano, aglio, peperoncino calabrese e prezzemolo.", price: 15.95, tags: ["v", "hot"] },
+      { name: "Gnocchi al Pesto Genovese", desc: "Potato gnocchi, basil pesto, toasted pine nuts and green beans.", descIt: "Gnocchi di patate, pesto di basilico, pinoli tostati e fagiolini.", price: 17.95, tags: ["v"] },
+      { name: "Linguine allo Scoglio", desc: "Clams, mussels, shrimp and calamari in white wine and cherry tomato.", descIt: "Vongole, cozze, gamberi e calamari con vino bianco e pomodorini.", price: 26.95, tags: [] },
+      { name: "Truffle Mushroom Risotto", desc: "Creamy arborio rice with wild mushrooms and black truffle oil.", nameIt: "Risotto Funghi e Tartufo", descIt: "Cremoso riso arborio con funghi selvatici e olio al tartufo nero.", price: 19.95, tags: ["v", "gf"] },
+    ],
+  },
+  {
+    id: "pizza",
+    name: "Pizza",
+    sub: "From our wood-fired oven",
+    nameIt: "Pizza",
+    subIt: "Dal nostro forno a legna",
+    items: [
+      { name: "Margherita", desc: "San Marzano tomato, fior di latte mozzarella, basil and olive oil.", descIt: "Pomodoro San Marzano, fior di latte, basilico e olio d'oliva.", price: 14.5, tags: ["v"] },
+      { name: "Diavola", desc: "Spicy salame, mozzarella, tomato and chili oil.", descIt: "Salame piccante, mozzarella, pomodoro e olio al peperoncino.", price: 16.95, tags: ["hot"] },
+      { name: "Quattro Formaggi", desc: "Mozzarella, gorgonzola, fontina, parmigiano and a drizzle of honey.", descIt: "Mozzarella, gorgonzola, fontina, parmigiano e un filo di miele.", price: 17.5, tags: ["v"] },
+      { name: "Prosciutto e Rucola", desc: "Prosciutto di Parma, wild arugula and shaved parmigiano.", descIt: "Prosciutto di Parma, rucola selvatica e scaglie di parmigiano.", price: 18.95, tags: [] },
+      { name: "Funghi e Tartufo", desc: "Wild mushrooms, truffle cream, mozzarella and fresh thyme.", descIt: "Funghi selvatici, crema al tartufo, mozzarella e timo fresco.", price: 19.5, tags: ["v", "chef"] },
+      { name: "Capricciosa", desc: "Ham, mushrooms, artichokes, black olives and mozzarella.", descIt: "Prosciutto cotto, funghi, carciofi, olive nere e mozzarella.", price: 17.95, tags: [] },
+    ],
+  },
+  {
+    id: "secondi",
+    name: "Secondi",
+    sub: "Meat & fish mains",
+    nameIt: "Secondi",
+    subIt: "Piatti di carne e pesce",
+    items: [
+      { name: "Lemon Garlic Salmon", desc: "Grilled salmon with lemon, garlic, fresh herbs and seasonal vegetables.", nameIt: "Salmone Limone e Aglio", descIt: "Salmone alla griglia con limone, aglio, erbe fresche e verdure di stagione.", price: 22.95, tags: ["gf"] },
+      { name: "Pollo alla Parmigiana", desc: "Breaded chicken breast, marinara, melted mozzarella and spaghetti.", descIt: "Petto di pollo impanato, marinara, mozzarella filante e spaghetti.", price: 21.5, tags: [] },
+      { name: "Osso Buco alla Milanese", desc: "Braised veal shank with gremolata over saffron risotto.", descIt: "Stinco di vitello brasato con gremolata su risotto allo zafferano.", price: 34, tags: ["gf", "chef"] },
+      { name: "Bistecca alla Fiorentina", desc: "32 oz T-bone steak for two, rosemary potatoes and grilled lemon.", descIt: "T-bone da 900 g per due, patate al rosmarino e limone grigliato.", price: 68, tags: ["gf"] },
+      { name: "Branzino al Forno", desc: "Whole roasted sea bass, cherry tomatoes, olives and capers.", descIt: "Branzino intero al forno con pomodorini, olive e capperi.", price: 29.5, tags: ["gf"] },
+      { name: "Melanzane alla Parmigiana", desc: "Baked eggplant layered with tomato, mozzarella and basil.", descIt: "Melanzane al forno a strati con pomodoro, mozzarella e basilico.", price: 18.5, tags: ["v", "gf"] },
+    ],
+  },
+  {
+    id: "dolci",
+    name: "Dolci",
+    sub: "Sweet endings",
+    nameIt: "Dolci",
+    subIt: "Il dolce finale",
+    items: [
+      { name: "Tiramisu", desc: "Classic Italian dessert with mascarpone, espresso and cocoa.", nameIt: "Tiramisù", descIt: "Il classico dolce italiano con mascarpone, espresso e cacao.", price: 8.95, tags: ["v", "chef"] },
+      { name: "Panna Cotta", desc: "Vanilla bean panna cotta with wild berry coulis.", descIt: "Panna cotta alla vaniglia con coulis di frutti di bosco.", price: 8.5, tags: ["v", "gf"] },
+      { name: "Cannoli Siciliani", desc: "Crisp shells filled with sweet ricotta, pistachio and candied orange.", descIt: "Cialde croccanti ripiene di ricotta dolce, pistacchio e arancia candita.", price: 7.95, tags: ["v"] },
+      { name: "Affogato al Caffè", desc: "Vanilla gelato drowned in a shot of hot espresso.", descIt: "Gelato alla vaniglia affogato in un espresso caldo.", price: 6.5, tags: ["v", "gf"] },
+      { name: "Gelato Artigianale", desc: "Three scoops: pistachio, stracciatella and limone.", descIt: "Tre palline: pistacchio, stracciatella e limone.", price: 7.5, tags: ["v", "gf"] },
+    ],
+  },
+  {
+    id: "vini",
+    name: "Wine & Drinks",
+    sub: "Vini & bevande · glass / bottle",
+    nameIt: "Vini & Bevande",
+    subIt: "Vini e bevande · calice / bottiglia",
+    items: [
+      { name: "Chianti Classico DOCG", desc: "Tuscany · Sangiovese — cherry, violet and a hint of spice.", descIt: "Toscana · Sangiovese — ciliegia, viola e un tocco speziato.", price: [12, 46], tags: [] },
+      { name: "Barolo DOCG", desc: "Piedmont · Nebbiolo — rose, tar and dark fruit.", descIt: "Piemonte · Nebbiolo — rosa, catrame e frutti scuri.", price: [19, 78], tags: ["chef"] },
+      { name: "Pinot Grigio delle Venezie", desc: "Veneto — crisp, fresh pear and citrus.", descIt: "Veneto — fresco, con note di pera e agrumi.", price: [10, 38], tags: [] },
+      { name: "Prosecco Superiore DOCG", desc: "Valdobbiadene — light bubbles, green apple and white flowers.", descIt: "Valdobbiadene — bollicine leggere, mela verde e fiori bianchi.", price: [11, 42], tags: [] },
+      { name: "Aperol Spritz", desc: "Aperol, prosecco, a splash of soda and fresh orange.", descIt: "Aperol, prosecco, uno spruzzo di soda e arancia fresca.", price: 12, tags: [] },
+      { name: "Limoncello della Casa", desc: "House-made lemon liqueur from Amalfi lemons, served ice-cold.", descIt: "Liquore della casa ai limoni di Amalfi, servito ghiacciato.", price: 8, tags: [] },
+      { name: "Espresso / Cappuccino", desc: "Freshly roasted Italian beans.", descIt: "Caffè italiano appena tostato.", price: [3.5, 4.75], tags: [] },
+      { name: "San Pellegrino", desc: "Sparkling water or Limonata, 750 ml.", descIt: "Acqua frizzante o Limonata, 750 ml.", price: 4.5, tags: [] },
+    ],
+  },
+];

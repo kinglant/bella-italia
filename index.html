@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bella Italia — Italian Bistro</title>
+  <meta name="description" content="Bella Italia — authentic Italian recipes crafted with the freshest ingredients and true Italian hospitality." />
+  <meta name="theme-color" content="#4d6125" />
+  <meta name="author" content="Chill Coding" />
+
+  <!-- Social preview (Open Graph / Twitter) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Bella Italia" />
+  <meta property="og:title" content="Bella Italia — Italian Bistro (concept website)" />
+  <meta property="og:description" content="A concept restaurant website: full menu, table reservations, guest reviews, gallery and EN / IT language switch." />
+  <meta property="og:image" content="images/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+  <script>document.documentElement.classList.add("js");</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,500;1,600&family=Montserrat:wght@400;500;600;700&family=Allura&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="images/hero-pasta.webp" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#home" class="logo" aria-label="Bella Italia home">
+        <svg class="logo__leaf" viewBox="0 0 40 24" aria-hidden="true">
+          <path d="M20 22 C20 14 22 8 28 3 C30 9 27 15 20 22Z" />
+          <path d="M20 22 C20 15 17 9 11 5 C10 11 13 17 20 22Z" />
+        </svg>
+        <span class="logo__name">Bella Italia</span>
+        <span class="logo__sub" data-i18n="logo.sub">Italian Bistro</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="#home" class="nav__link active" data-i18n="nav.home">Home</a>
+        <a href="#about" class="nav__link" data-i18n="nav.about">About</a>
+        <a href="#menu" class="nav__link" data-i18n="nav.menu">Menu</a>
+        <a href="#reservations" class="nav__link" data-i18n="nav.res">Reservations</a>
+        <a href="#gallery" class="nav__link" data-i18n="nav.gallery">Gallery</a>
+        <a href="#contact" class="nav__link" data-i18n="nav.contact">Contact</a>
+        <a href="#reservations" class="btn btn--primary nav__cta-mobile" data-i18n="cta.reserve">Reserve a Table</a>
+      </nav>
+
+      <a href="#reservations" class="btn btn--primary header__cta">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="M9 15l2 2 4-4"/></svg>
+        <span data-i18n="cta.reserve">Reserve a Table</span>
+      </a>
+
+      <div class="lang" role="group" aria-label="Language">
+        <button class="lang__btn active" data-lang="en" aria-pressed="true">EN</button>
+        <button class="lang__btn" data-lang="it" aria-pressed="false">IT</button>
+      </div>
+
+      <button class="burger" id="burger" aria-label="Open menu" data-i18n-aria="aria.openMenu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="home">
+      <div class="container hero__inner">
+        <div class="hero__text reveal">
+          <p class="script hero__hello">Benvenuti! <span class="flag-line"><i></i><i></i><i></i></span></p>
+          <h1 class="hero__title" data-i18n="hero.title">Authentic Italian<br /><span class="green">Made with <em>Love</em></span></h1>
+          <svg class="divider" viewBox="0 0 100 12" aria-hidden="true">
+            <path d="M0 6h36M64 6h36" />
+            <path d="M50 6c-4-5-10-5-14 0 4 5 10 5 14 0zm0 0c4-5 10-5 14 0-4 5-10 5-14 0z" />
+          </svg>
+          <p class="hero__lead" data-i18n="hero.lead">Enjoy timeless Italian recipes crafted with the freshest ingredients and a passion for true Italian hospitality.</p>
+          <div class="hero__actions">
+            <a href="#menu" class="btn btn--primary">
+              <span data-i18n="hero.explore">Explore Menu</span>
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v8a2 2 0 0 0 2 2v8M5 3v6M9 3v6M17 21V3c-2 1-3 4-3 8h3"/></svg>
+            </a>
+            <a href="#about" class="btn btn--outline">
+              <span data-i18n="hero.story">Our Story</span>
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20C10 14 14 10 20 4M8 16c-2-3-1-7 2-9M12 12c3 1 6 0 8-3M10 14c-3 0-5 2-6 4"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__media reveal reveal--right">
+          <div class="hero__blob">
+            <img src="images/hero-pasta.webp" alt="Spaghetti with Italian sausage and fresh parsley" width="1600" height="1216" fetchpriority="high" />
+          </div>
+          <svg class="hero__sprig" viewBox="0 0 220 160" aria-hidden="true">
+            <path d="M10 20 C60 90 120 140 210 150" />
+            <g class="leaves">
+              <path d="M40 58c-14-6-20-20-18-32 12 6 20 18 18 32z"/>
+              <path d="M40 58c10-12 26-14 36-10-8 10-22 14-36 10z"/>
+              <path d="M78 100c-14-6-20-20-18-32 12 6 20 18 18 32z"/>
+              <path d="M78 100c10-12 26-14 36-10-8 10-22 14-36 10z"/>
+              <path d="M124 128c-12-8-16-22-12-34 10 8 16 20 12 34z"/>
+              <path d="M124 128c12-10 28-10 36-4-10 8-24 10-36 4z"/>
+              <path d="M172 144c-10-8-12-20-8-30 10 8 12 18 8 30z"/>
+            </g>
+          </svg>
+          <div class="badge" aria-label="Traditional recipes since 2008, made in Italy">
+            <svg viewBox="0 0 120 120" class="badge__ring" aria-hidden="true">
+              <defs><path id="circlePath" d="M60 60 m-44 0 a44 44 0 1 1 88 0 a44 44 0 1 1 -88 0" /></defs>
+              <text><textPath href="#circlePath" data-i18n="badge.ring">TRADITIONAL RECIPES • MADE IN ITALY • </textPath></text>
+            </svg>
+            <div class="badge__center">
+              <small data-i18n="badge.since">SINCE</small>
+              <strong>2008</strong>
+              <svg viewBox="0 0 40 24" aria-hidden="true"><path d="M20 22 C20 14 22 8 28 3 C30 9 27 15 20 22Z" /><path d="M20 22 C20 15 17 9 11 5 C10 11 13 17 20 22Z" /></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="torn torn--bottom" aria-hidden="true"></div>
+    </section>
+
+    <!-- ================= FEATURES ================= -->
+    <section class="features">
+      <div class="container features__grid">
+        <article class="feature reveal">
+          <svg class="feature__ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 40C8 22 20 10 40 8c0 20-12 32-30 32"/><path d="M8 40L28 20"/><path d="M14 22c-6 2-8 8-6 14 6 0 10-4 10-10"/></svg>
+          <div><h3 data-i18n="feat1.h">Fresh Ingredients</h3><p data-i18n="feat1.p">We use locally sourced ingredients for the best flavor.</p></div>
+        </article>
+        <article class="feature reveal">
+          <svg class="feature__ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M14 26c-5 0-8-4-8-8s4-8 8-7c1-5 5-8 10-8s9 3 10 8c4-1 8 3 8 7s-3 8-8 8"/><path d="M14 26v14h20V26"/><path d="M14 34h20M20 40v-6M28 40v-6"/></svg>
+          <div><h3 data-i18n="feat2.h">Expert Chefs</h3><p data-i18n="feat2.p">Our chefs bring years of experience and Italian tradition.</p></div>
+        </article>
+        <article class="feature reveal">
+          <svg class="feature__ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M14 4h20c0 10-2 18-10 18S14 14 14 4z"/><path d="M15 12h18M24 22v18M16 44h16"/></svg>
+          <div><h3 data-i18n="feat3.h">Fine Wines</h3><p data-i18n="feat3.p">Handpicked Italian wines that perfectly pair with every dish.</p></div>
+        </article>
+        <article class="feature reveal">
+          <svg class="feature__ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 42S6 30 6 17c0-6 5-10 10-10 4 0 7 2 8 5 1-3 4-5 8-5 5 0 10 4 10 10 0 13-18 25-18 25z"/></svg>
+          <div><h3 data-i18n="feat4.h">Made with Love</h3><p data-i18n="feat4.p">Every dish is prepared with care, passion, and authenticity.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT / STORY ================= -->
+    <section class="story" id="about">
+      <div class="story__img reveal">
+        <img src="images/interior.webp" alt="Bella Italia ristorante terrace on a stone street" loading="lazy" width="1400" height="1120" />
+      </div>
+      <div class="story__text reveal">
+        <p class="script"><span data-i18n="story.kicker">Our Story</span> <span class="sprig-mini">❦</span></p>
+        <h2 data-i18n="story.h2">A Taste of Italy<br />in <em class="green">Every Bite</em></h2>
+        <p data-i18n="story.p">Bella Italia was born from a love for authentic Italian cuisine and warm hospitality. We bring the spirit of Italy to your table, creating memorable moments with family and friends.</p>
+        <p class="story__more" id="storyMore" data-i18n="story.more" hidden>Our recipes come from three generations of family kitchens in Tuscany. Every morning we roll fresh pasta by hand, bake our bread in a wood-fired oven, and choose produce from local farmers — just like nonna used to do.</p>
+        <button class="link-btn" id="storyToggle" aria-expanded="false" aria-controls="storyMore">Read more</button>
+        <p class="script script--sign">Grazie!</p>
+      </div>
+      <div class="story__art reveal reveal--right">
+        <img src="images/tuscany-art.webp" alt="Rolling Tuscan hills with cypress trees" width="1000" height="700" loading="lazy" />
+      </div>
+    </section>
+
+    <!-- ================= MENU / SPECIALS ================= -->
+    <section class="specials" id="specials">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="script"><span class="sprig-mini flip">❦</span> <span data-i18n="specials.kicker">Chef's Specials</span> <span class="sprig-mini">❦</span></p>
+          <h2 data-i18n="specials.h2">Handcrafted Italian Favorites</h2>
+        </header>
+
+        <div class="carousel reveal">
+          <button class="carousel__btn carousel__btn--prev" id="prevBtn" aria-label="Previous dishes">
+            <svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg>
+          </button>
+          <div class="carousel__track" id="track">
+            <article class="dish" data-cat="main">
+              <div class="dish__img"><img src="images/lasagna.webp" alt="Classic lasagna" loading="lazy" width="800" height="640" /></div>
+              <div class="dish__body">
+                <h3 data-i18n="dish1.n">Classic Lasagna</h3>
+                <p data-i18n="dish1.d">Layers of pasta, rich meat sauce, béchamel, and parmesan.</p>
+                <div class="dish__foot"><span class="price">$18.95</span></div>
+              </div>
+            </article>
+            <article class="dish" data-cat="main">
+              <div class="dish__img"><img src="images/risotto.webp" alt="Truffle mushroom risotto" loading="lazy" width="438" height="350" /></div>
+              <div class="dish__body">
+                <h3 data-i18n="dish2.n">Truffle Mushroom Risotto</h3>
+                <p data-i18n="dish2.d">Creamy arborio rice with wild mushrooms and truffle oil.</p>
+                <div class="dish__foot"><span class="price">$19.95</span></div>
+              </div>
+            </article>
+            <article class="dish" data-cat="main">
+              <div class="dish__img"><img src="images/salmon.webp" alt="Lemon garlic salmon" loading="lazy" width="800" height="530" /></div>
+              <div class="dish__body">
+                <h3 data-i18n="dish3.n">Lemon Garlic Salmon</h3>
+                <p data-i18n="dish3.d">Grilled salmon with lemon, garlic, and fresh herbs.</p>
+                <div class="dish__foot"><span class="price">$22.95</span></div>
+              </div>
+            </article>
+            <article class="dish" data-cat="dessert">
+              <div class="dish__img"><img src="images/tiramisu.webp" alt="Tiramisu" loading="lazy" width="800" height="578" /></div>
+              <div class="dish__body">
+                <h3 data-i18n="dish4.n">Tiramisu</h3>
+                <p data-i18n="dish4.d">Classic Italian dessert with mascarpone and espresso.</p>
+                <div class="dish__foot"><span class="price">$8.95</span></div>
+              </div>
+            </article>
+            <article class="dish" data-cat="main">
+              <div class="dish__img"><img src="images/tagliatelle.webp" alt="Tagliatelle pomodoro" loading="lazy" width="800" height="659" /></div>
+              <div class="dish__body">
+                <h3 data-i18n="dish5.n">Tagliatelle Pomodoro</h3>
+                <p data-i18n="dish5.d">Hand-rolled tagliatelle, San Marzano tomato, basil and parmesan.</p>
+                <div class="dish__foot"><span class="price">$17.50</span></div>
+              </div>
+            </article>
+          </div>
+          <button class="carousel__btn carousel__btn--next" id="nextBtn" aria-label="Next dishes">
+            <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+        <div class="carousel__dots" id="dots" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- ================= FULL MENU ================= -->
+    <section class="menu" id="menu">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="script"><span class="sprig-mini flip">❦</span> Il Nostro Menu <span class="sprig-mini">❦</span></p>
+          <h2 data-i18n="menu.h2">From Our Kitchen to Your Table</h2>
+          <p class="section-sub" data-i18n="menu.sub">Fresh pasta rolled by hand every morning, pizza from our wood-fired oven, and wines from the best Italian vineyards.</p>
+        </header>
+
+        <div class="menu-tabs reveal" id="menuTabs" role="tablist" aria-label="Menu categories"></div>
+
+        <div class="menu-card reveal">
+          <div class="menu-card__head" id="menuHead"></div>
+          <div class="menu-list" id="menuList" role="tabpanel"></div>
+          <ul class="menu-legend" aria-label="Legend">
+            <li><span class="tag tag--v">V</span> <span data-i18n="legend.v">Vegetarian</span></li>
+            <li><span class="tag tag--gf">GF</span> <span data-i18n="legend.gf">Gluten-free</span></li>
+            <li><span class="tag tag--hot" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 4c0 2 2 2 2 4M8 9c5-2 9 0 10 5 1 5-4 8-9 7S2 16 4 12c1-2 2-3 4-3z"/></svg></span> <span data-i18n="legend.hot">Spicy</span></li>
+            <li><span class="tag tag--chef" aria-hidden="true">★</span> <span data-i18n="legend.chef">Chef's pick</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TESTIMONIALS ================= -->
+    <section class="reviews" id="reviews">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="script"><span class="sprig-mini flip">❦</span> Dicono di Noi <span class="sprig-mini">❦</span></p>
+          <h2 data-i18n="reviews.h2">What Our Guests Say</h2>
+        </header>
+
+        <div class="reviews__summary reveal">
+          <div class="rating-big">
+            <strong>4.9</strong>
+            <div>
+              <div class="stars stars--lg" aria-label="4.9 out of 5 stars">★★★★★</div>
+              <span data-i18n="reviews.based">Based on 1,280+ reviews</span>
+            </div>
+          </div>
+          <ul class="rating-sources">
+            <li><b>4.9</b> Google</li>
+            <li><b>5.0</b> TripAdvisor</li>
+            <li><b>4.8</b> Yelp</li>
+          </ul>
+          <button class="btn btn--outline" id="writeReviewBtn" data-i18n="reviews.write">Write a Review</button>
+        </div>
+
+        <div class="r-slider reveal">
+          <button class="carousel__btn carousel__btn--prev" id="rPrev" aria-label="Previous reviews"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button>
+          <div class="r-track" id="rTrack"></div>
+          <button class="carousel__btn carousel__btn--next" id="rNext" aria-label="Next reviews"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+        </div>
+        <div class="carousel__dots" id="rDots" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- Review form modal -->
+    <div class="modal" id="reviewModal" role="dialog" aria-modal="true" aria-labelledby="reviewTitle" hidden>
+      <div class="modal__box modal__box--form">
+        <button class="modal__close" data-close aria-label="Close">×</button>
+        <p class="script">Grazie!</p>
+        <h3 id="reviewTitle" data-i18n="rf.title">Share Your Experience</h3>
+        <form id="reviewForm" class="review-form" novalidate>
+          <div class="star-input" role="radiogroup" aria-label="Your rating">
+            <button type="button" data-v="1" aria-label="1 star">★</button><button type="button" data-v="2" aria-label="2 stars">★</button><button type="button" data-v="3" aria-label="3 stars">★</button><button type="button" data-v="4" aria-label="4 stars">★</button><button type="button" data-v="5" aria-label="5 stars">★</button>
+          </div>
+          <label class="rf-field"><span data-i18n="rf.name">Your name</span><input type="text" id="rfName" maxlength="40" placeholder="e.g. Maria R." data-i18n-ph="rf.namePh" /></label>
+          <label class="rf-field"><span data-i18n="rf.text">Your review</span><textarea id="rfText" rows="4" maxlength="300" placeholder="What did you enjoy most?" data-i18n-ph="rf.textPh"></textarea></label>
+          <p class="rf-error" id="rfError" role="alert"></p>
+          <button type="submit" class="btn btn--primary" data-i18n="rf.post">Post Review</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- ================= RESERVATION ================= -->
+    <section class="reserve" id="reservations">
+      <div class="reserve__band reveal">
+        <div class="reserve__title">
+          <p class="script">Buon Appetito!</p>
+          <h2 data-i18n="res.h2">Reserve Your Table</h2>
+          <p class="reserve__sub" data-i18n="res.sub">We can't wait to welcome you to Bella Italia.</p>
+        </div>
+        <form class="reserve__form" id="reserveForm" novalidate>
+          <label class="field">
+            <span data-i18n="res.date">Date</span>
+            <input type="date" id="resDate" name="date" required />
+          </label>
+          <label class="field">
+            <span data-i18n="res.time">Time</span>
+            <select id="resTime" name="time" required></select>
+          </label>
+          <label class="field">
+            <span data-i18n="res.guests">Guests</span>
+            <select id="resGuests" name="guests" required>
+              <option value="1" data-i18n="res.one">1 Person</option>
+              <option value="2" selected data-n="2">2 People</option>
+              <option value="3" data-n="3">3 People</option>
+              <option value="4" data-n="4">4 People</option>
+              <option value="5" data-n="5">5 People</option>
+              <option value="6" data-n="6">6 People</option>
+              <option value="8" data-n="8+">8+ People</option>
+            </select>
+          </label>
+          <label class="field">
+            <span data-i18n="res.name">Your Name</span>
+            <input type="text" id="resName" name="name" autocomplete="name" placeholder="Maria Rossi" maxlength="40" required />
+          </label>
+          <label class="field">
+            <span data-i18n="res.phone">Phone</span>
+            <input type="tel" id="resPhone" name="phone" autocomplete="tel" placeholder="(619) 555-0123" maxlength="20" required />
+          </label>
+          <button type="submit" class="btn btn--light" id="resSubmit">
+            <span class="btn__label" data-i18n="res.submit">Reserve Now</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+          <p class="form-error" id="formError" role="alert"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ================= GALLERY ================= -->
+    <section class="gallery" id="gallery">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="script"><span class="sprig-mini flip">❦</span> La Galleria <span class="sprig-mini">❦</span></p>
+          <h2 data-i18n="gallery.h2">Moments at Bella Italia</h2>
+        </header>
+        <div class="gallery__grid">
+          <button class="gallery__item g-tall reveal" data-i18n-cap="cap.rome" data-src="images/rome-street.webp" data-caption="Via del Corso, Rome"><img src="images/rome-street.webp" alt="Via del Corso, Rome" loading="lazy" width="900" height="1599" /></button>
+          <button class="gallery__item g-big reveal" data-i18n-cap="cap.interior" data-src="images/interior.webp" data-caption="Our little ristorante"><img src="images/interior.webp" alt="Our little ristorante" loading="lazy" width="1400" height="1120" /></button>
+          <button class="gallery__item reveal" data-i18n-cap="cap.chef" data-src="images/chef-pasta.webp" data-caption="Pasta rolled by hand every morning"><img src="images/chef-pasta.webp" alt="Pasta rolled by hand every morning" loading="lazy" width="1000" height="1000" /></button>
+          <button class="gallery__item reveal" data-i18n-cap="cap.oven" data-src="images/pizza-oven.webp" data-caption="Straight from the wood-fired oven"><img src="images/pizza-oven.webp" alt="Straight from the wood-fired oven" loading="lazy" width="1000" height="1000" /></button>
+          <button class="gallery__item g-wide reveal" data-i18n-cap="cap.wine" data-src="images/wine-table.webp" data-caption="Long dinners with friends"><img src="images/wine-table.webp" alt="Long dinners with friends" loading="lazy" width="1400" height="840" /></button>
+          <button class="gallery__item g-tall reveal" data-i18n-cap="cap.road" data-src="images/tuscany-road.webp" data-caption="Cypress roads of Tuscany"><img src="images/tuscany-road.webp" alt="Cypress roads of Tuscany" loading="lazy" width="900" height="1200" /></button>
+          <button class="gallery__item g-wide reveal" data-i18n-cap="cap.amalfi" data-src="images/amalfi.webp" data-caption="The Amalfi coast"><img src="images/amalfi.webp" alt="The Amalfi coast" loading="lazy" width="1400" height="902" /></button>
+          <button class="gallery__item reveal" data-i18n-cap="cap.vineyard" data-src="images/vineyard.webp" data-caption="Where our Chianti comes from"><img src="images/vineyard.webp" alt="Where our Chianti comes from" loading="lazy" width="1600" height="1067" /></button>
+          <button class="gallery__item reveal" data-i18n-cap="cap.florence" data-src="images/florence.webp" data-caption="Florence at golden hour"><img src="images/florence.webp" alt="Florence at golden hour" loading="lazy" width="1920" height="1279" /></button>
+        </div>
+      </div>
+    </section>
+    <!-- ================= CONTACT ================= -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="script"><span class="sprig-mini flip">❦</span> Vieni a Trovarci <span class="sprig-mini">❦</span></p>
+          <h2 data-i18n="contact.h2">Find Us in Little Italy</h2>
+        </header>
+        <div class="contact__grid">
+          <div class="contact__card reveal">
+            <ul class="contact__list">
+              <li>
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                <div><h4 data-i18n="contact.address">Address</h4><p>1234 Little Italy Way<br />San Diego, CA 92101</p></div>
+              </li>
+              <li>
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+                <div><h4 data-i18n="contact.phone">Phone</h4><p><a href="tel:+16195550198">(619) 555-0198</a></p></div>
+              </li>
+              <li>
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+                <div><h4 data-i18n="contact.email">Email</h4><p><a href="mailto:ciao@bellaitalia.example">ciao@bellaitalia.example</a></p></div>
+              </li>
+              <li>
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                <div>
+                  <h4 data-i18n="contact.hours">Opening Hours</h4>
+                  <table class="hours" id="hoursTable">
+                    <tr data-days="1,2,3,4" data-open="11" data-close="22"><td data-i18n="days.mt">Mon – Thu</td><td class="hrs"></td></tr>
+                    <tr data-days="5,6" data-open="11" data-close="23"><td data-i18n="days.fs">Fri – Sat</td><td class="hrs"></td></tr>
+                    <tr data-days="0" data-open="11" data-close="21"><td data-i18n="days.sun">Sunday</td><td class="hrs"></td></tr>
+                  </table>
+                </div>
+              </li>
+            </ul>
+            <div class="contact__actions">
+              <a class="btn btn--primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=Little+Italy,+San+Diego,+CA" target="_blank" rel="noopener">
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8z"/></svg>
+                <span data-i18n="contact.dir">Get Directions</span>
+              </a>
+              <a class="btn btn--outline" href="tel:+16195550198" data-i18n="contact.call">Call Us</a>
+            </div>
+          </div>
+          <div class="contact__map reveal reveal--right">
+            <iframe title="Map of Bella Italia in Little Italy, San Diego"
+              src="https://maps.google.com/maps?q=Little%20Italy%2C%20San%20Diego%2C%20CA&amp;z=15&amp;output=embed"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#home" class="logo logo--footer">
+          <span class="logo__name">Bella Italia</span>
+          <span class="logo__sub" data-i18n="logo.sub">Italian Bistro</span>
+        </a>
+      </div>
+      <div>
+        <h4 data-i18n="footer.links">Quick Links</h4>
+        <ul class="footer__links footer__links--2col">
+          <li><a href="#home" data-i18n="nav.home">Home</a></li>
+          <li><a href="#menu" data-i18n="nav.menu">Menu</a></li>
+          <li><a href="#about" data-i18n="nav.aboutUs">About Us</a></li>
+          <li><a href="#reservations" data-i18n="nav.res">Reservations</a></li>
+          <li><a href="#gallery" data-i18n="nav.gallery">Gallery</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+          <li><a href="#reviews" data-i18n="nav.reviews">Reviews</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footer.hours">Hours</h4>
+        <ul class="footer__links">
+          <li data-open="11" data-close="22"><span data-i18n="days.mt">Mon – Thu</span>: <span class="hrs"></span></li>
+          <li data-open="11" data-close="23"><span data-i18n="days.fs">Fri – Sat</span>: <span class="hrs"></span></li>
+          <li data-open="11" data-close="21"><span data-i18n="days.sun">Sunday</span>: <span class="hrs"></span></li>
+        </ul>
+        <p class="open-status" id="openStatus"></p>
+      </div>
+      <div>
+        <h4 data-i18n="footer.location">Location</h4>
+        <ul class="footer__links">
+          <li>1234 Little Italy Way</li>
+          <li>San Diego, CA 92101</li>
+          <li><a href="tel:+16195550198">(619) 555-0198</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footer.follow">Follow Us</h4>
+        <div class="socials">
+          <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3c-3 0-4 2-4 4v2H7v4h3v8h4v-8h3l1-4h-4V8z" class="fill"/></svg></a>
+          <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.5"/><circle cx="17" cy="7" r=".8" class="fill"/></svg></a>
+          <a href="https://www.tripadvisor.com" target="_blank" rel="noopener" aria-label="TripAdvisor"><svg viewBox="0 0 24 24"><circle cx="7" cy="13" r="4"/><circle cx="17" cy="13" r="4"/><circle cx="7" cy="13" r="1" class="fill"/><circle cx="17" cy="13" r="1" class="fill"/><path d="M3 9c5-4 13-4 18 0"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>© <span id="year"></span> <span data-i18n="footer.fiction">Bella Italia — a fictional restaurant.</span></p>
+      <p class="credit">
+        <span class="demo-pill" data-i18n="footer.concept">Concept project</span>
+        <span data-i18n="footer.by">Designed &amp; developed by</span> <a href="https://chillcoding.pythonanywhere.com" target="_blank" rel="noopener">Chill Coding</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="to-top" id="toTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24"><path d="M6 15l6-6 6 6"/></svg>
+  </button>
+
+  <!-- Reservation modal -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal__box">
+      <button class="modal__close" data-close aria-label="Close">×</button>
+      <div class="check" aria-hidden="true"><svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24"/><path d="M15 27l7 7 15-16"/></svg></div>
+      <p class="script" id="modalHello">Grazie mille!</p>
+      <h3 id="modalTitle" data-i18n="modal.title">Your table is reserved</h3>
+      <dl class="booking" id="booking"></dl>
+      <p class="booking__note" id="modalNote"></p>
+      <div class="modal__actions">
+        <button class="btn btn--outline" id="addCal" type="button">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4M12 13v5M9.5 15.5h5"/></svg>
+          <span data-i18n="modal.cal">Add to Calendar</span>
+        </button>
+        <button class="btn btn--primary" data-close data-i18n="modal.ok">Perfetto</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox__close" aria-label="Close">×</button>
+    <figure><img id="lightboxImg" src="" alt="" /><figcaption id="lightboxCap"></figcaption></figure>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="i18n.js"></script>
+  <script src="menu-data.js"></script>
+  <script src="reviews-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
